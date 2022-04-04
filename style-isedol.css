@@ -39,8 +39,15 @@ h1 {
 }
 #article {
   padding-left: 20px;
+  font-family:"맑은고딕";
 }
-@media(max-width:800px) {
+#border {
+  box-sizing: border-box;
+  width: 1000px;
+  height: auto;
+  margin: 0 auto;
+}
+@media(max-width:700px) {
   #grid {
     display: block;
   }
@@ -51,6 +58,10 @@ h1 {
   }
   h1 {
     border-bottom: none;
+  }
+  #border {
+    box-sizing: border-box;
+    width: auto;
   }
 }
 body {
