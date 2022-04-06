@@ -2,6 +2,10 @@ a {
   color:black;
   text-decoration: none;
 }
+p {
+  line-height: 23px;
+  text-indent: 20px;
+}
 h1 {
   font-size: 50px; text-align: center;
   color:pink;text-shadow: 1px 1px brown;
@@ -13,8 +17,8 @@ h1 {
   border-right: grey 1px solid;
   margin:0;
   padding-top: 5px;
-  padding-left: 5px;
   width: 260px;
+  z-index: 1;
 }
 #grid {
   display: grid; grid-template-columns: 260px 1fr;
@@ -42,13 +46,46 @@ h1 {
   font-family:"맑은고딕";
 }
 #border {
-  box-sizing: border-box;
+  box-sizing: content-box;
   width: 1000px;
   height: auto;
   margin: 0 auto;
+  z-index:1;
+}
+.img {
+  text-align: center;
+}
+
+.float-container img {
+  float: left;
+  width: 150px;
+  margin: 5px;
+  padding: 5px;
+}
+#gridforsidebars {
+  display: grid;
+  grid-template-columns: 300px 1fr 300px;
+  box-sizing: content-box;
+  margin: 0 auto;
+  width: 1600px;
+  height: auto;
+}
+
+#sidebar-left {
+  position: relative;
+  left: -50px;
+  width: 300px;
+}
+#sidebar-right {
+  position: relative;
+  right: 150px;
+  width: 300px;
 }
 @media(max-width:700px) {
   #grid {
+    display: block;
+  }
+  #gridforsidebars {
     display: block;
   }
   #ulol {
@@ -62,6 +99,9 @@ h1 {
   #border {
     box-sizing: border-box;
     width: auto;
+  }
+  #sidebar-left, #sidebar-right {
+    display: none;
   }
 }
 body {
